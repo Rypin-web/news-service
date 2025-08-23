@@ -3,14 +3,16 @@ import {useEffect, useState} from "react";
 import type {TNewsApiArticles} from "../entities/news/api/newsapi.types.ts";
 
 function App() {
+    document.body.classList.add('theme-dark')
+
     const [newsData, setNewsData] = useState<TNewsApiArticles[]>([])
 
-    useEffect(()=>{
-        NewsApiService.topHeadlines({q: 'trump'}).then((data) => {
-            if(data.status === 'ok') setNewsData(data.articles)
-            else console.log(data)
-        })
-    }, [])
+    // useEffect(()=>{
+    //     NewsApiService.topHeadlines({q: 'trump'}).then((data) => {
+    //         if(data.status === 'ok') setNewsData(data.articles)
+    //         else console.log(data)
+    //     })
+    // }, [])
 
     return (
         <>
