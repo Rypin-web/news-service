@@ -21,6 +21,13 @@
 }
 
 body {
+    transition: background-color 0.15s ease-in-out,
+    color 0.15s ease-in-out,
+    border-bottom-color 0.15s ease-in-out,
+    border-top-color 0.15s ease-in-out,
+    border-left-color 0.15s ease-in-out,
+    border-rigth-color 0.15s ease-in-out,
+    fill 0.15s ease-in-out;
     background-color: var(--color-background);
     color: var(--color-font);
 }
