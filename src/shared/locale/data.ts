@@ -2,10 +2,12 @@ export const translations = {
     en: {
         logo:'NEWS',
         input_placeholder_search:'Search..',
+        locale_select_title:'Choose language'
     },
     ru:{
         logo:'НОВОСТИ',
-        input_placeholder_search:'Поиск..'
+        input_placeholder_search:'Поиск..',
+        locale_select_title:'Выберите язык'
     }
 } as const
 
