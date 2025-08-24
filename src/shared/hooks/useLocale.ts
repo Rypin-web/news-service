@@ -12,5 +12,5 @@ export function useLocale() {
         dispatch(localeSlice.actions.changeLocale(newLocale))
     }, [dispatch])
 
-    return [locale, changeLocale]
+    return {locale, changeLocale}
 }
