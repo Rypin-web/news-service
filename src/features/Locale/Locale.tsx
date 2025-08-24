@@ -2,6 +2,7 @@ import {useLocale} from "../../shared/hooks/useLocale.ts";
 import {useTranslations} from "../../shared/hooks/useTranslations.ts";
 import {useState} from "react";
 import {supportedLocales, type TLocale} from "../../shared/locale/data.ts";
+import {Icon} from "../../shared/UI/Icon/Icon.tsx";
 
 function Locale() {
     const {locale, changeLocale} = useLocale()
@@ -13,10 +14,11 @@ function Locale() {
 
     return (
         <>
-            <button onClick={toggleChangeLocaleScreen}>{`${locale}`}</button>
+            {/**/}
+            <button onClick={toggleChangeLocaleScreen}><Icon name={'translate'} />{`${locale}`}</button>
             {selectLocaleIsOpen &&
               <div>
-                  <h3>{uiData.locale_select_title}</h3>
+                  <p>{uiData.locale_select_title}</p>
                   {supportedLocales.map((e) =>
                       <button onClick={() => {
                           changeLocale(e as TLocale)
