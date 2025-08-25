@@ -1,0 +1,17 @@
+.localeItem {
+    display: block;
+    background: var(--color-button-background);
+    border: none;
+    outline: none;
+    color: var(--color-font);
+    border-radius: 5px;
+    font-size: 18px;
+    min-width: 100px;
+    padding: 7px;
+    margin: 5px auto;
+}
+
+.localeItemActive {
+    background: var(--color-button-background-active);
+
+}
