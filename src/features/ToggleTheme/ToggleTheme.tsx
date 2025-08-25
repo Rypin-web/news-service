@@ -1,6 +1,5 @@
-import cl from './ToggleTheme.module.css'
 import {useCallback} from "react";
-import {Icon} from "../../shared/UI/Icon/Icon.tsx";
+import {IconButton} from "../../shared/UI/IconButton/IconButton.tsx";
 
 function ToggleTheme() {
     const toggleTheme = useCallback(()=>{
@@ -9,9 +8,7 @@ function ToggleTheme() {
     }, [])
 
     return (
-        <button onClick={toggleTheme} className={cl.toggleThemeButton}>
-            <Icon name={'changeTheme'} w={50} h={50} />
-        </button>
+        <IconButton name={'changeTheme'} handleClick={toggleTheme} w={30} h={30} />
     );
 }
 
