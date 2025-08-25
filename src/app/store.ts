@@ -1,6 +1,6 @@
 import {configureStore} from "@reduxjs/toolkit";
 import {newsApi} from "../entities/news/newsApi.ts";
-import {localeSlice} from "../shared/locale/localeSlice.ts";
+import {localeSlice} from "../shared/slices/locale/localeSlice.ts";
 
 export const store = configureStore({
     reducer: {

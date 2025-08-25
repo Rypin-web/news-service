@@ -1,6 +1,6 @@
 import {createSlice} from "@reduxjs/toolkit";
 import {supportedLocales, type TLocale, type TLocaleStructure, translations} from "./data.ts";
-import {getBrowserLocale} from "../utils/getBrowserLocale.ts";
+import {getBrowserLocale} from "../../utils/getBrowserLocale.ts";
 
 type TPayloadChangeLocale = {
     payload: TLocale

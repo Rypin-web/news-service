@@ -1,7 +1,7 @@
 import {useDispatch} from "react-redux";
 import {useTypedSelector} from "./useTypedSelector.ts";
-import {localeSlice} from "../locale/localeSlice.ts";
-import type {TLocale} from "../locale/data.ts";
+import {localeSlice} from "../slices/locale/localeSlice.ts";
+import type {TLocale} from "../slices/locale/data.ts";
 import {useCallback} from "react";
 
 export function useLocale() {

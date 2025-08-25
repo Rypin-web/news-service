@@ -1,6 +1,6 @@
 import cl from './LocaleItemButton.module.css'
 import type {ReactNode} from "react";
-import type {TLocale} from "../../locale/data.ts";
+import type {TLocale} from "../../slices/locale/data.ts";
 
 type TLocaleItemButtonProps = {
     children:ReactNode,
