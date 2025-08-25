@@ -8,3 +8,10 @@
     justify-content: space-around;
     align-items: center;
 }
+
+.headerContainer {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    align-items: center;
+}

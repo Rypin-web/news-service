@@ -10,13 +10,15 @@ function Header() {
     return (
         <header className={cl.header}>
             <Link href={'#'}><h2>{uiData.logo}</h2></Link>
+            {/*search*/}
             <div></div>
             <div></div>
+            <div></div>
+            <div></div>
+            <div className={cl.headerContainer}>
                 <Locale />
                 <ToggleTheme />
-            {/*<>search</>*/}
-            {/*<>change theme</>*/}
-            {/*<>change locale</>*/}
+            </div>
         </header>
     );
 }
