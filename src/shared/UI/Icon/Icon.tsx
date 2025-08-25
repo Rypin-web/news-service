@@ -1,6 +1,6 @@
 import {iconsData} from "./IconsData.ts";
 
-type TIconProps = {
+export type TIconProps = {
     name: keyof typeof iconsData,
     w?:number,
     h?:number,
