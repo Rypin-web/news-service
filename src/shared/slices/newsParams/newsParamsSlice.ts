@@ -8,7 +8,7 @@ type TInitialState = {
 }
 
 const initialState: TInitialState = {
-    activeEndPoint: 'topHeadlines',
+    activeEndPoint: 'everything',
     everything: {
         q: '',
         searchIn: '',
