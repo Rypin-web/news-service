@@ -10,29 +10,39 @@
     -moz-osx-font-smoothing: grayscale;
     transition: .15s;
 
-    --color-background: #f5f5f5;
-    --color-background-aсcent: #f0f0f0;
+    --basic-color-font: #121212;
+    --inverse-color-font: #f5f5f5;
 
-    --color-font: #121212;
-    --color-link-hover: #005ad8;
-    --color-icon: #131313;
-    --color-icon-hover: #002e73;
+    --basic-background: #f5f5f5;
+    --inverse-background: #121212;
 
-    --color-button-background: #d9d9d9;
-    --color-button-background-active: #b1d0ff;
+    --basic-color-icon: #131313;
+    --inverse-color-icon: #f6f6f6;
+    --basic-color-icon-hover: #005ad8;
+    --inverse-color-icon-hover: #b1d4ff;
+
+    --basic-background-button: #d9d9d9;
+    --basic-background-button-inverse: #232323;
+
+    --basic-color-border: #818181;
 }
 
 [data-theme=dark]{
-    --color-background: #121212;
-    --color-background-aсcent: #1a1a1a;
+    --basic-color-font: #f5f5f5;
+    --inverse-color-font: #121212;
 
-    --color-font: #f5f5f5;
-    --color-link-hover: #3487fb;
-    --color-icon: #f6f6f6;
-    --color-icon-hover: #b1d4ff;
+    --basic-background: #121212;
+    --inverse-background: #f5f5f5;
 
-    --color-button-background: #232323;
-    --color-button-background-active: #11325e
+    --basic-color-icon: #f6f6f6;
+    --inverse-color-icon: #131313;
+    --basic-color-icon-hover: #b1d4ff;
+    --inverse-color-icon-hover: #005ad8;
+
+    --basic-background-button: #232323;
+    --basic-background-button-inverse: #d9d9d9;
+
+    --basic-color-border: #818181;
 }
 
 body {
