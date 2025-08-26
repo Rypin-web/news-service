@@ -1,9 +1,9 @@
 .localeItem {
     display: block;
-    background: var(--color-button-background);
+    background: var(--basic-background-button);
     border: none;
     outline: none;
-    color: var(--color-font);
+    color: var(--basic-color-font);
     border-radius: 5px;
     font-size: 18px;
     min-width: 100px;
@@ -12,6 +12,5 @@
 }
 
 .localeItemActive {
-    background: var(--color-button-background-active);
-
+    background: var(--basic-background-button-active);
 }

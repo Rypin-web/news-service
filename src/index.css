@@ -28,6 +28,8 @@
 
     --basic-background-button: #d9d9d9;
     --inverse-background-button: #232323;
+    --basic-background-button-active: #b1d4ff;
+    --inverse-background-button-active: #005ad8;
 
     --basic-color-border: #818181;
 }
@@ -51,6 +53,8 @@
 
     --basic-background-button: #232323;
     --inverse-background-button: #d9d9d9;
+    --basic-background-button-active: #005ad8;
+    --inverse-background-button-active: #b1d4ff;
 
     --basic-color-border: #818181;
 }
