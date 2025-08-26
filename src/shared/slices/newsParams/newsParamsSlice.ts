@@ -2,11 +2,13 @@ import {createSlice} from "@reduxjs/toolkit";
 import type {TNewsEverythingParams, TNewsHeadlinesParams} from "../../../entities/news/newsapi.types.ts";
 
 type TInitialState = {
+    activeEndPoint: 'everything' | 'topHeadlines'
     everything: TNewsEverythingParams,
     topHeadlines: TNewsHeadlinesParams
 }
 
 const initialState: TInitialState = {
+    activeEndPoint: 'topHeadlines',
     everything: {
         q: '',
         searchIn: '',
@@ -39,6 +41,10 @@ export const newsParamsSlice = createSlice({
         },
         setTopHeadlinesParams: (state, {payload}: { payload: TNewsHeadlinesParams }) => {
             state.topHeadlines = payload
+        },
+        setActiveEndpoint: (state, {payload}: {payload:TInitialState['activeEndPoint']}) => {
+            if(state.activeEndPoint === payload) return
+            else state.activeEndPoint = payload
         }
     }
 })

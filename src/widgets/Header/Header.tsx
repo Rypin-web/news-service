@@ -10,7 +10,7 @@ import {useRef} from "react";
 function Header() {
     const uiData = useTranslations()
     const {params, setParams} = useNewsParams('topHeadlines')
-    const {isLoading, isSuccess, data} = useTopHeadlinesQuery(params)
+    const {data} = useTopHeadlinesQuery(params)
     const input = useRef<HTMLInputElement>(null)
 
     const search = () => {
