@@ -1,15 +1,17 @@
 export const translations = {
     en: {
         logo:'NEWS',
-        input_placeholder_search:'Search..',
         locale_select_title:'Choose language',
-        tab_title: 'News service'
+        tab_title: 'News service',
+        input_search_placeholder: 'Enter something..',
+        input_search_button: 'Search'
     },
     ru:{
         logo:'НОВОСТИ',
-        input_placeholder_search:'Поиск..',
         locale_select_title:'Выберите язык',
-        tab_title: 'Сервис новостей'
+        tab_title: 'Сервис новостей',
+        input_search_placeholder: 'Напишите что-то..',
+        input_search_button: 'Искать'
     }
 } as const
 
