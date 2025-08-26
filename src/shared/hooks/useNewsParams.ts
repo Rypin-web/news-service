@@ -11,7 +11,7 @@ export function useNewsParams<T extends 'everything' | 'topHeadlines'>(key: T) {
         (params: T extends 'everything' ? TNewsEverythingParams : TNewsHeadlinesParams) => {
         if (key === 'everything') dispatch(newsParamsSlice.actions.setEverythingParams(params as TNewsEverythingParams))
         if (key === 'topHeadlines') dispatch(newsParamsSlice.actions.setTopHeadlinesParams(params))
-    }, [dispatch])
+    }, [dispatch, key])
 
     return {params, setParams}
 }
