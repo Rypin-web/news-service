@@ -1,6 +1,8 @@
 import cl from './LocaleItemButton.module.css'
 import type {ReactNode} from "react";
 import type {TLocale} from "../../slices/locale/data.ts";
+import {useNews} from "../../hooks/useNews.ts";
+import {useNewsParams} from "../../hooks/useNewsParams.ts";
 
 type TLocaleItemButtonProps = {
     children:ReactNode,
@@ -10,9 +12,13 @@ type TLocaleItemButtonProps = {
 }
 
 function LocaleItemButton(p:TLocaleItemButtonProps) {
+    const {activeEndpoint} = useNews()
+    const {params,setParams} = useNewsParams(activeEndpoint)
+
     return (
         <button onClick={()=>{
             p.changeLocale(p.children as TLocale)
+            setParams({...params, language: p.children as TLocale})
             p.setState()
         }}
             key={p.children as string}
