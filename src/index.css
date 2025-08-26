@@ -12,6 +12,8 @@
 
     --basic-color-font: #121212;
     --inverse-color-font: #f5f5f5;
+    --basic-nochange-color-font: #121212;
+    --inverse-nochange-color-font: #f5f5f5;
 
     --basic-color-link: #121212;
     --inverse-color-link: #f5f5f5;
@@ -25,8 +27,13 @@
     --inverse-color-icon: #f6f6f6;
     --basic-color-icon-hover: #005ad8;
     --inverse-color-icon-hover: #b1d4ff;
+    --basic-nochange-color-icon: #131313;
+    --inverse-nochange-color-icon: #f6f6f6;
+    --basic-nochange-color-icon-hover: #005ad8;
+    --inverse-nochange-color-icon-hover: #b1d4ff;
 
     --basic-background-button: #d9d9d9;
+    --basic-secondary-background-button: #888888;
     --inverse-background-button: #232323;
     --basic-background-button-active: #b1d4ff;
     --inverse-background-button-active: #005ad8;
@@ -37,6 +44,8 @@
 [data-theme=dark]{
     --basic-color-font: #f5f5f5;
     --inverse-color-font: #121212;
+    --basic-nochange-color-font: #121212;
+    --inverse-nochange-color-font: #f5f5f5;
 
     --basic-color-link: #f5f5f5;
     --inverse-color-link: #121212;
@@ -50,8 +59,13 @@
     --inverse-color-icon: #131313;
     --basic-color-icon-hover: #b1d4ff;
     --inverse-color-icon-hover: #005ad8;
+    --basic-nochange-color-icon: #131313;
+    --inverse-nochange-color-icon: #f6f6f6;
+    --basic-nochange-color-icon-hover: #005ad8;
+    --inverse-nochange-color-icon-hover: #b1d4ff;
 
     --basic-background-button: #232323;
+    --basic-secondary-background-button: #cdcdcd;
     --inverse-background-button: #d9d9d9;
     --basic-background-button-active: #005ad8;
     --inverse-background-button-active: #b1d4ff;

@@ -1,12 +1,8 @@
-import {useRef} from "react";
-import {useNewsParams} from "../shared/hooks/useNewsParams.ts";
 import {useNews} from "../shared/hooks/useNews.ts";
 
 
 function TestComponent() {
-    const input = useRef<HTMLInputElement>(null)
-    const {activeEndpoint, setEndpoint, response} = useNews()
-    const {params, setParams} = useNewsParams(activeEndpoint)
+    const {response} = useNews()
 
     // const handleClickChangeSearchParams = (input: string) => {
     //     setEndpoint(activeEndpoint)
