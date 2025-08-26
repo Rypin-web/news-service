@@ -43,8 +43,7 @@ export const newsParamsSlice = createSlice({
             state.topHeadlines = payload
         },
         setActiveEndpoint: (state, {payload}: {payload:TInitialState['activeEndPoint']}) => {
-            if(state.activeEndPoint === payload) return
-            else state.activeEndPoint = payload
+            state.activeEndPoint = payload
         }
     }
 })
