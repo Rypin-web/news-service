@@ -13,6 +13,11 @@
     --basic-color-font: #121212;
     --inverse-color-font: #f5f5f5;
 
+    --basic-color-link: #121212;
+    --inverse-color-link: #f5f5f5;
+    --basic-color-link-hover: #b1d4ff;
+    --inverse-color-link-hover: #005ad8;
+
     --basic-background: #f5f5f5;
     --inverse-background: #121212;
 
@@ -22,7 +27,7 @@
     --inverse-color-icon-hover: #b1d4ff;
 
     --basic-background-button: #d9d9d9;
-    --basic-background-button-inverse: #232323;
+    --inverse-background-button: #232323;
 
     --basic-color-border: #818181;
 }
@@ -30,6 +35,11 @@
 [data-theme=dark]{
     --basic-color-font: #f5f5f5;
     --inverse-color-font: #121212;
+
+    --basic-color-link: #f5f5f5;
+    --inverse-color-link: #121212;
+    --basic-color-link-hover: #005ad8;
+    --inverse-color-link-hover: #b1d4ff;
 
     --basic-background: #121212;
     --inverse-background: #f5f5f5;
@@ -40,7 +50,7 @@
     --inverse-color-icon-hover: #005ad8;
 
     --basic-background-button: #232323;
-    --basic-background-button-inverse: #d9d9d9;
+    --inverse-background-button: #d9d9d9;
 
     --basic-color-border: #818181;
 }
@@ -53,8 +63,8 @@ body {
     border-left-color 0.15s ease-in-out,
     border-rigth-color 0.15s ease-in-out,
     fill 0.15s ease-in-out;
-    background-color: var(--color-background);
-    color: var(--color-font);
+    background-color: var(--basic-background);
+    color: var(--basic-color-font);
 }
 
 @font-face {
