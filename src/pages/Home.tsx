@@ -9,7 +9,7 @@ function Home() {
             <main>
                 <Container>
                     work
-                    <TestComponent></TestComponent>
+                    {/*<TestComponent></TestComponent>*/}
                 </Container>
             </main>
             <footer></footer>
