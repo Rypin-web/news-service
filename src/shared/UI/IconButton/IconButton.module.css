@@ -5,16 +5,10 @@
     background: none;
     outline: none;
     border: none;
-    fill: var(--color-icon);
+    fill: var(--basic-color-icon);
     transition: fill 0.15s ease-in-out;
 
     &:hover{
-        fill: var(--color-icon-hover);
+        fill: var(--basic-color-icon-hover);
     }
-}
-
-.iconButton-text-content{
-    display: block;
-    width: fit-content;
-    color: var(--color-font);
 }
