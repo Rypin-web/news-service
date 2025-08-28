@@ -10,15 +10,17 @@ function Header() {
 
     return (
         <header className={cl.header}>
-            <Link href={'#'}><h2>{uiData.logo}</h2></Link>
-            {/*search*/}
-            <SearchNews />
-            <div></div>
-            <div></div>
-            <div></div>
-            <div className={cl.headerContainer}>
-                <Locale />
-                <ToggleTheme />
+            <div className={cl.headerInner}>
+                <Link href={'#'}><h2>{uiData.logo}</h2></Link>
+                {/*search*/}
+                <SearchNews />
+                <div></div>
+                <div></div>
+                <div></div>
+                <div className={cl.headerContainer}>
+                    <Locale />
+                    <ToggleTheme />
+                </div>
             </div>
         </header>
     );
