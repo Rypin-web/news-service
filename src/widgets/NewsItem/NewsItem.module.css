@@ -1,0 +1,117 @@
+.newsItem {
+    display: flex;
+    flex-direction: column;
+    max-width: 420px;
+    background: var(--basic-background-button);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    height: 420px;
+}
+
+.newsItem:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.imageContainer {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    background: var(--basic-background-button);
+}
+
+.imageContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.newsItem:hover .imageContainer img {
+    transform: scale(1.05);
+}
+
+.noImage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--inverse-background-button-active), var(--basic-background-button-active));
+    color: var(--basic-color-font);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.content {
+    padding: 16px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.4;
+    color: var(--basic-color-font);
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.description {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--basic-color-font);
+    opacity: 0.8;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    flex-grow: 1;
+}
+
+.readLink {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 16px;
+    background: var(--basic-background-button);
+    color: var(--basic-color-font);
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 14px;
+    transition: all 0.2s ease;
+    margin-top: auto;
+    align-self: flex-start;
+}
+
+.readLink:hover {
+    background: var(--basic-background-button-active);
+    transform: translateX(4px);
+}
+
+@media (max-width: 768px) {
+    .content {
+        padding: 12px;
+    }
+
+    .title {
+        font-size: 16px;
+    }
+
+    .description {
+        font-size: 13px;
+        -webkit-line-clamp: 2;
+    }
+
+    .readLink {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+}
