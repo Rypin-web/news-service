@@ -1,4 +1,5 @@
 # Новостной сервис
+<a href="./README_en.md" lang="en">English version</a> <br>
 
 Это простой проект для просмотра новостей. <br>
 Стек: TS, React, Rtk, Rtk query
