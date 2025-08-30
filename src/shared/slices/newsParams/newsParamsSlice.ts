@@ -38,10 +38,12 @@ export const newsParamsSlice = createSlice({
     initialState,
     reducers: {
         setEverythingParams: (state, {payload}: { payload: TNewsEverythingParams }) => {
-            state.everything = payload
+            if(typeof payload.q !== 'undefined' && payload.q.trim() === '') state.everything = {...payload, q:'bitcoin'}
+            else state.everything = payload
         },
         setTopHeadlinesParams: (state, {payload}: { payload: TNewsHeadlinesParams }) => {
-            state.topHeadlines = payload
+            if(typeof payload.q !== 'undefined' && payload.q.trim() === '') state.everything = {...payload, q:'bitcoin'}
+            else state.topHeadlines = payload
         },
         setActiveEndpoint: (state, {payload}: {payload:TInitialState['activeEndPoint']}) => {
             state.activeEndPoint = payload
