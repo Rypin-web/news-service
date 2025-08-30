@@ -1,0 +1,12 @@
+.pageButton {
+    display: inline-flex;
+    color: var(--basic-color-font);
+    border: none;
+    padding: 4px 8px;
+    border-radius: 50%;
+    background: var(--basic-background-button);
+}
+
+.pageButtonActive {
+    background: var(--basic-background-button-active) !important;
+}

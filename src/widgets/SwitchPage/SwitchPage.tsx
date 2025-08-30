@@ -1,5 +1,7 @@
 import {useNewsParams} from "../../shared/hooks/useNewsParams.ts";
-import Link from "../../shared/UI/Link/Link.tsx";
+import cl from './SwitchPage.module.css'
+import {useCallback} from "react";
+import {PageButton} from "../../shared/UI/PageButton/PageButton.tsx";
 
 type TSwitchPageProps = {
     endpoint: 'everything' | 'topHeadlines',
@@ -8,17 +10,23 @@ type TSwitchPageProps = {
 
 function SwitchPage(p: TSwitchPageProps) {
     let totalPages: number = 0
-    const {page, pageSize} = useNewsParams(p.endpoint).params
+    const {params, setParams} = useNewsParams(p.endpoint)
+    const {pageSize, page} = params
     if (typeof pageSize !== 'undefined' && typeof page !== 'undefined')
         totalPages = Math.round(p.totalResults / pageSize)
 
+    const switchPage = useCallback((i: number) => {
+        if (i === page) return
+        setParams({...params, page: i})
+    }, [page])
+
     return (
-        <div>
+        <div className={cl.switchPageContainer}>
             {totalPages > 0 &&
                 new Array(totalPages).fill(0).map((_, i) =>
-                    (<span>
-                        <Link href={'#'}>{i + 1}{i === page && '+'}</Link>
-                    </span>))
+                    (
+                        <PageButton handle={switchPage} isActive={i + 1 === page} page={i + 1} />
+                    ))
             }
         </div>
     );
