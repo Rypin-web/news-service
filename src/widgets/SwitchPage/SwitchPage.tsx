@@ -18,7 +18,7 @@ function SwitchPage(p: TSwitchPageProps) {
     const switchPage = useCallback((i: number) => {
         if (i === page) return
         setParams({...params, page: i})
-    }, [page])
+    }, [params])
 
     return (
         <div className={cl.switchPageContainer}>
