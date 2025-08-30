@@ -12,9 +12,7 @@ function NewsContainer() {
             <div className={cl.newsContainer}>
                 {response.isLoading && <h2>Loading..</h2>}
                 {response.isSuccess && response.data.articles.length > 0 ?
-                    <>
-                        {response.data.articles.map((e) => <NewsItem data={e} key={e.title} />)}
-                    </>
+                    response.data.articles.map((e) => <NewsItem data={e} key={e.title} />)
                     : <h3>Ничего не найдено</h3>
                 }
             </div>
