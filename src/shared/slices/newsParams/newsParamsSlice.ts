@@ -11,10 +11,10 @@ type TInitialState = {
 const initialState: TInitialState = {
     activeEndPoint: 'everything',
     everything: {
-        q: '',
+        q: 'bitcoin',
         searchIn: '',
         sortBy: 'publishedAt',
-        sources: 'techradar',
+        sources: '',
         domains: '',
         excludeDomains: '',
         from: '',
@@ -24,10 +24,10 @@ const initialState: TInitialState = {
         pageSize: 10
     },
     topHeadlines: {
-        q: '',
+        q: 'bitcoin',
         country: '',
         category: '',
-        sources: 'techradar',
+        sources: '',
         page: 1,
         pageSize: 10,
     }
