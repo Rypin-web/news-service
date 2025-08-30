@@ -1,5 +1,6 @@
 import {createSlice} from "@reduxjs/toolkit";
 import type {TNewsEverythingParams, TNewsHeadlinesParams} from "../../../entities/news/newsapi.types.ts";
+import {getBrowserLocale} from "../../utils/getBrowserLocale.ts";
 
 type TInitialState = {
     activeEndPoint: 'everything' | 'topHeadlines'
@@ -13,12 +14,12 @@ const initialState: TInitialState = {
         q: '',
         searchIn: '',
         sortBy: 'publishedAt',
-        sources: '',
+        sources: 'techradar',
         domains: '',
         excludeDomains: '',
         from: '',
         to: '',
-        language: 'en',
+        language: getBrowserLocale(),
         page: 1,
         pageSize: 10
     },
@@ -26,7 +27,7 @@ const initialState: TInitialState = {
         q: '',
         country: '',
         category: '',
-        sources: '',
+        sources: 'techradar',
         page: 1,
         pageSize: 10,
     }
