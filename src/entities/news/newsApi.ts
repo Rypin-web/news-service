@@ -12,22 +12,42 @@ export const newsApi = createApi({
     }),
     endpoints: (build) => ({
         everything: build.query<TNewsApiResponse, TNewsEverythingParams>({
-            query: (params) => ({
-                url:'/everything',
-                params:{
-                    ...params,
-                    apiKey:API_KEY
+            query: (params) => {
+                const neededParams = {...params} as TNewsEverythingParams
+
+                Object.keys(neededParams).forEach((e )=>{
+                    const key = e as keyof TNewsEverythingParams
+                    if(typeof neededParams[key] !== 'undefined' && neededParams[key] === '' || neededParams[key] == null)
+                        delete neededParams[key]
+                })
+
+                return {
+                    url:'/everything',
+                    params:{
+                        ...neededParams,
+                        apiKey:API_KEY
+                    }
                 }
-            })
+            }
         }),
         topHeadlines: build.query<TNewsApiResponse, TNewsHeadlinesParams>({
-            query: (params) => ({
-                url:'/top-headlines',
-                params:{
-                    ...params,
-                    apiKey: API_KEY
+            query: (params) => {
+                const neededParams = {...params} as TNewsHeadlinesParams
+
+                Object.keys(neededParams).forEach((e )=>{
+                    const key = e as keyof TNewsHeadlinesParams
+                    if(typeof neededParams[key] !== 'undefined' && neededParams[key] === '' || neededParams[key] == null)
+                        delete neededParams[key]
+                })
+
+                return {
+                    url:'/top-headlines',
+                    params:{
+                        ...neededParams,
+                        apiKey: API_KEY
+                    }
                 }
-            })
+            }
         })
     })
 })

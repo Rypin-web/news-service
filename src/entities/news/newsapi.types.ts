@@ -25,7 +25,7 @@ export type TNewsApiArticles = {
 }
 
 export type TNewsEverythingParams = {
-    q: string,
+    q?: string,
     searchIn?: string,
     sources?: string,
     domains?: string,
