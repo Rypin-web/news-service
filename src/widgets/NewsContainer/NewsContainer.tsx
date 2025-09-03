@@ -2,13 +2,15 @@ import cl from './NewsContainer.module.css'
 import {useNews} from "../../shared/hooks/useNews.ts";
 import {NewsItem} from "../NewsItem/NewsItem.tsx";
 import {SwitchPage} from "../SwitchPage/SwitchPage.tsx";
+import {SwitchNewsEndpoint} from "../SwitchNewsEndpoint/SwitchNewsEndpoint.tsx";
 
 function NewsContainer() {
-    const {activeEndpoint, response} = useNews()
+    const {activeEndpoint, setEndpoint, response} = useNews()
     if (response.error) console.warn(response)
 
     return (
         <>
+            <SwitchNewsEndpoint endpoint={activeEndpoint} switch={setEndpoint} />
             <div className={cl.newsContainer}>
                 {response.isLoading && <h2>Loading..</h2>}
                 {response.isSuccess && response.data.articles.length > 0 ?
