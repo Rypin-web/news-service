@@ -1,4 +1,5 @@
 import cl from './SwitchNewsEndpoint.module.css'
+import {useTranslations} from "../../shared/hooks/useTranslations.ts";
 
 type TSwitchNewsEndpointProps = {
     endpoint: "everything" | "topHeadlines",
@@ -6,6 +7,7 @@ type TSwitchNewsEndpointProps = {
 }
 
 function SwitchNewsEndpoint(p: TSwitchNewsEndpointProps) {
+    const uiData = useTranslations()
     const isEverything = p.endpoint === 'everything'
     const isTop = p.endpoint === 'topHeadlines'
 
@@ -17,14 +19,14 @@ function SwitchNewsEndpoint(p: TSwitchNewsEndpointProps) {
                 className={`${cl.endpointButton} ${isEverything ? cl.endpointButtonActive : ''}`}
                 onClick={() => p.switch('everything')}
             >
-                Everything
+                {uiData.switch_news_endpoint_button_everything}
             </button>
 
             <button
                 className={`${cl.endpointButton} ${isTop ? cl.endpointButtonActive : ''}`}
                 onClick={() => p.switch('topHeadlines')}
             >
-                Top Headlines
+                {uiData.switch_news_endpoint_button_top_headlines}
             </button>
         </div>
     );

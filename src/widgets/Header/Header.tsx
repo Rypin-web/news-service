@@ -12,7 +12,6 @@ function Header() {
         <header className={cl.header}>
             <div className={cl.headerInner}>
                 <Link href={'#'}><h2>{uiData.logo}</h2></Link>
-                {/*search*/}
                 <SearchNews />
                 <div></div>
                 <div></div>

@@ -1,11 +1,13 @@
 import cl from './NewsItem.module.css'
 import type {TNewsApiArticles} from "../../entities/news/newsapi.types.ts";
+import {useTranslations} from "../../shared/hooks/useTranslations.ts";
 
 type TNewsItemProps = {
     data: TNewsApiArticles
 }
 
 function NewsItem(p: TNewsItemProps) {
+    const uiData = useTranslations()
     const hasImage = p.data.urlToImage && p.data.urlToImage !== '';
 
     return (
@@ -18,7 +20,7 @@ function NewsItem(p: TNewsItemProps) {
                         loading='lazy'
                     />
                 ) : (
-                    <span>No image available</span>
+                    <span>{uiData.news_card_image_not_found}</span>
                 )}
             </div>
             <div className={cl.content}>
@@ -32,7 +34,7 @@ function NewsItem(p: TNewsItemProps) {
                     target='_blank'
                     rel='noopener noreferrer'
                 >
-                    Read more →
+                    {uiData.news_card_read_more}
                 </a>
             </div>
         </article>
